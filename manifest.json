@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "IELTS Test Completion Tracker",
+  "version": "1.0",
+  "description": "Adds completion tags to IELTS test cards on engnovate.com",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["*://engnovate.com/*", "*://*.engnovate.com/*", "file://*/*test-page.html"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
